@@ -1,0 +1,44 @@
+$red: #900
+$green: #070
+$blue: #009
+$border: 5px solid
+
+body
+  margin: 0
+
+.page
+  width: 100%
+  margin: auto
+
+.page div div
+  box-sizing: border-box
+  float: left
+  border: $border
+  text-align: center
+
+/* Border colors */
+.red > div
+  border-color: $red !important
+.green > div
+  border-color: $green !important
+.blue > div
+  border-color: $blue !important
+
+/* Template Helpers */
+.full
+  width: 100%
+.half
+  width: 50%
+.quarter
+  width: 25%
+.threequarter
+  width: 75%
+
+.first
+  border-bottom: transparent !important
+.last
+  border-top: transparent !important
+.inner
+  border-right: transparent !important
+.end
+  border-right: $border !important

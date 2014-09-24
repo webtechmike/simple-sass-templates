@@ -1,0 +1,49 @@
+body {
+  margin: 0; }
+
+.page {
+  width: 100%;
+  margin: auto; }
+
+.page div div {
+  box-sizing: border-box;
+  float: left;
+  border: 5px solid;
+  text-align: center; }
+
+/* Border colors */
+.red > div {
+  border-color: #900 !important; }
+
+.green > div {
+  border-color: #070 !important; }
+
+.blue > div {
+  border-color: #009 !important; }
+
+/* Grid Helpers */
+.full {
+  width: 100%; }
+
+.half {
+  width: 50%; }
+
+.quarter {
+  width: 25%; }
+
+.threequarter {
+  width: 75%; }
+
+.first {
+  border-bottom: transparent !important; }
+
+.last {
+  border-top: transparent !important; }
+
+.inner {
+  border-right: transparent !important; }
+
+.end {
+  border-right: 5px solid !important; }
+
+/*# sourceMappingURL=style.css.map */
