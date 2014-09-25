@@ -3,18 +3,27 @@ $green: #070
 $blue: #009
 $border: 5px solid
 
+@mixin box-shadow ($leftRight, $upDown, $size, $color)
+  -webkit-box-shadow: $leftRight $upDown $size $color
+  -moz-box-shadow: $leftRight $upDown $size $color
+  box-shadow: $leftRight $upDown $size $color
+
 body
   margin: 0
 
 .page
   width: 100%
-  margin: auto
+
+.page > div
+  @include box-shadow(2px, 2px, 3px, #000)
+  width: 33%
 
 .page div div
   box-sizing: border-box
   float: left
   border: $border
   text-align: center
+  transition: all 1.25s linear 0.5s
 
 /* Border colors */
 .red > div
@@ -36,9 +45,39 @@ body
 
 .first
   border-bottom: transparent !important
+  height: 20%
 .last
   border-top: transparent !important
+  height: 10%
 .inner
   border-right: transparent !important
+  //max-height: 810px
+  height: 70%
 .end
   border-right: $border !important
+
+
+
+img
+  width: 100%
+
+
+@mixin text-inset($colour, $opacity: 0.7)
+
+  @if lightness($colour) < 50%
+    // if the text colour is a dark colour
+    // we need a white shadow, bottom, right
+    text-shadow: 1px 1px 1px rgba(#fff, $opacity)
+  @else
+  // else it must be light so we need
+  // a black shadow, top, left
+  text-shadow: -1px -1px 1px rgba(#000, $opacity)
+
+
+  // set the text colour
+  color: $colour
+
+
+
+h1
+  color: text-inset($blue, 1)

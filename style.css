@@ -2,14 +2,20 @@ body {
   margin: 0; }
 
 .page {
-  width: 100%;
-  margin: auto; }
+  width: 100%; }
+
+.page > div {
+  -webkit-box-shadow: 2px 2px 3px #000;
+  -moz-box-shadow: 2px 2px 3px #000;
+  box-shadow: 2px 2px 3px #000;
+  width: 33%; }
 
 .page div div {
   box-sizing: border-box;
   float: left;
   border: 5px solid;
-  text-align: center; }
+  text-align: center;
+  transition: all 1.25s linear 0.5s; }
 
 /* Border colors */
 .red > div {
@@ -21,7 +27,7 @@ body {
 .blue > div {
   border-color: #009 !important; }
 
-/* Grid Helpers */
+/* Template Helpers */
 .full {
   width: 100%; }
 
@@ -35,15 +41,24 @@ body {
   width: 75%; }
 
 .first {
-  border-bottom: transparent !important; }
+  border-bottom: transparent !important;
+  height: 20%; }
 
 .last {
-  border-top: transparent !important; }
+  border-top: transparent !important;
+  height: 10%; }
 
 .inner {
-  border-right: transparent !important; }
+  border-right: transparent !important;
+  height: 70%; }
 
 .end {
   border-right: 5px solid !important; }
+
+img {
+  width: 100%; }
+
+h1 {
+  color: text-inset(#009, 1); }
 
 /*# sourceMappingURL=style.css.map */

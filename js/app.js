@@ -1,22 +1,74 @@
 var app = angular.module('app', []);
 
-app.directive('leftColumn', function () {
+app.directive('sixteen', function () {
     return {
         restrict: "E",
-        templateUrl: "templates/leftcolumn.html"
+        replace: true,
+        templateUrl: "templates/layouts/16.html"
     }
 });
 
-app.directive('rightColumn', function () {
+app.directive('eighteen', function () {
     return {
         restrict: "E",
-        templateUrl: "templates/rightcolumn.html"
+        replace: true,
+        templateUrl: "templates/layouts/18.html"
     }
 });
 
-app.directive('threeColumn', function () {
+app.directive('footer', function () {
     return {
         restrict: "E",
-        templateUrl: "templates/threecolumn.html"
+        replace: true,
+        templateUrl: "templates/footer.html"
     }
 });
+
+app.directive('footer', function () {
+    return {
+        restrict: "E",
+        replace: true,
+        templateUrl: "templates/footer.html"
+    }
+});
+
+app.directive('header', function () {
+    return {
+        restrict: "E",
+        replace: true,
+        templateUrl: "templates/header.html"
+    }
+});
+
+app.directive('footer', function () {
+    return {
+        restrict: "E",
+        replace: true,
+        templateUrl: "templates/footer.html"
+    }
+});
+
+app.directive('left', function () {
+    return {
+        restrict: "E",
+        replace: true,
+        templateUrl: "templates/left.html"
+    }
+});
+
+app.directive('right', function () {
+    return {
+        restrict: "E",
+        replace: true,
+        templateUrl: "templates/right.html"
+    }
+});
+
+app.directive('mainMenu', function () {
+    return {
+        restrict: "E",
+        replace: true,
+        templateUrl: "templates/main-menu.html"
+    }
+});
+
