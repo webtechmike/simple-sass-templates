@@ -1,3 +1,5 @@
+"use strict";
+
 var app = angular.module('app', []);
 
 app.directive('sixteen', function () {
@@ -72,3 +74,9 @@ app.directive('mainMenu', function () {
     }
 });
 
+app.directive('edit', function () {
+    return {
+        restrict: "A",
+        templateUrl: "templates/edit-actions.html"
+    }
+});

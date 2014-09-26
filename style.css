@@ -17,6 +17,18 @@ body {
   text-align: center;
   transition: all 1.25s linear 0.5s; }
 
+.first {
+  border-bottom: transparent !important; }
+
+.last {
+  border-top: transparent !important; }
+
+.inner {
+  border-right: transparent !important; }
+
+.end {
+  border-right: 5px solid !important; }
+
 /* Border colors */
 .red > div {
   border-color: #900 !important; }
@@ -27,7 +39,7 @@ body {
 .blue > div {
   border-color: #009 !important; }
 
-/* Template Helpers */
+/* Section Sizers */
 .full {
   width: 100%; }
 
@@ -39,21 +51,6 @@ body {
 
 .threequarter {
   width: 75%; }
-
-.first {
-  border-bottom: transparent !important;
-  height: 20%; }
-
-.last {
-  border-top: transparent !important;
-  height: 10%; }
-
-.inner {
-  border-right: transparent !important;
-  height: 70%; }
-
-.end {
-  border-right: 5px solid !important; }
 
 img {
   width: 100%; }

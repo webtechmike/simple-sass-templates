@@ -8,6 +8,13 @@ $border: 5px solid
   -moz-box-shadow: $leftRight $upDown $size $color
   box-shadow: $leftRight $upDown $size $color
 
+@mixin transition($property, $timing, $easing, $delay)
+  -webkit-transition: $property $timing $easing $delay
+  transition: $property $timing $easing $delay
+
+@mixin cssgradient($topcolor, $bottomcolor)
+  background-image: (linear-gradient(top, $topcolor 0%, $bottomcolor 100%))
+
 body
   margin: 0
 
@@ -16,14 +23,24 @@ body
 
 .page > div
   @include box-shadow(2px, 2px, 3px, #000)
-  width: 33%
+  width: 15%
 
 .page div div
   box-sizing: border-box
   float: left
   border: $border
   text-align: center
-  transition: all 1.25s linear 0.5s
+  @include transition(all, 1.25s, linear, 0.5s)
+
+
+.first
+  border-bottom: transparent !important
+.last
+  border-top: transparent !important
+.inner
+  border-right: transparent !important
+.end
+  border-right: $border !important
 
 /* Border colors */
 .red > div
@@ -33,30 +50,17 @@ body
 .blue > div
   border-color: $blue !important
 
-/* Template Helpers */
+/* Section Sizers */
 .full
   width: 100%
+  @include cssgradient(rgba(0,0,0,0), rgba(0,0,0,0.65))
+
 .half
   width: 50%
 .quarter
   width: 25%
 .threequarter
   width: 75%
-
-.first
-  border-bottom: transparent !important
-  height: 20%
-.last
-  border-top: transparent !important
-  height: 10%
-.inner
-  border-right: transparent !important
-  //max-height: 810px
-  height: 70%
-.end
-  border-right: $border !important
-
-
 
 img
   width: 100%
@@ -81,3 +85,7 @@ img
 
 h1
   color: text-inset($blue, 1)
+
+
+marquee
+  @include cssgradient(black, grey)
